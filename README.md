@@ -59,6 +59,7 @@ A list of people and technologies that contributed to this project is listed in 
 ### Built With
 
 * [CodePush](https://microsoft.github.io/code-push/)
+* [Expo](https://docs.expo.dev)
 * [React Native](https://reactnative.dev)
 * [NodeJS](https://nodejs.org/)
 
@@ -76,6 +77,28 @@ This is an example of how to list things you need to use the software and how to
   ```sh
   npm install npm@latest -g
   ```
+* React Native
+  ```sh
+    npm install -g react-native-cli
+  ```
+  
+  ou
+  
+  ```sh
+    yarn global add react-native-cli
+  ```
+
+* Expo
+  ```sh
+    npm install --global expo-cli
+  ```
+  
+  ou
+  
+  ```sh
+    yarn global add expo-cli
+  ```
+
 
 ### Installation
 
