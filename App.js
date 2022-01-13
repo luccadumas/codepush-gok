@@ -1,11 +1,12 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import CodePush from 'react-native-code-push';
 
-export default function App() {
+function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <Text>CodePush in React Native!</Text>
       <StatusBar style="auto" />
     </View>
   );
@@ -19,3 +20,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+
+export default CodePush({
+  checkFrequency: CodePush.CheckFrequency.ON_APP_RESUME,
+})(App);

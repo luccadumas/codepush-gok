@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">codepush-gok</string>
+    <string name="CodePushDeploymentKey">YOUR_KEY</string>
 </resources>

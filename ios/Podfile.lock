@@ -1,5 +1,11 @@
 PODS:
+  - Base64 (1.1.2)
   - boost-for-react-native (1.63.0)
+  - CodePush (7.0.4):
+    - Base64 (~> 1.1)
+    - JWT (~> 3.0.0-beta.12)
+    - React-Core
+    - SSZipArchive (~> 2.2.2)
   - DoubleConversion (1.1.6)
   - EXApplication (4.0.1):
     - ExpoModulesCore
@@ -30,6 +36,8 @@ PODS:
     - React-jsi (= 0.64.3)
     - ReactCommon/turbomodule/core (= 0.64.3)
   - glog (0.3.5)
+  - JWT (3.0.0-beta.14):
+    - Base64 (~> 1.1.2)
   - RCT-Folly (2020.01.13.00):
     - boost-for-react-native
     - DoubleConversion
@@ -287,9 +295,11 @@ PODS:
     - React-cxxreact (= 0.64.3)
     - React-jsi (= 0.64.3)
     - React-perflogger (= 0.64.3)
+  - SSZipArchive (2.2.3)
   - Yoga (1.14.0)
 
 DEPENDENCIES:
+  - CodePush (from `../node_modules/react-native-code-push`)
   - DoubleConversion (from `../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec`)
   - EXApplication (from `../node_modules/expo-application/ios`)
   - EXConstants (from `../node_modules/expo-constants/ios`)
@@ -332,9 +342,14 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - Base64
     - boost-for-react-native
+    - JWT
+    - SSZipArchive
 
 EXTERNAL SOURCES:
+  CodePush:
+    :path: "../node_modules/react-native-code-push"
   DoubleConversion:
     :podspec: "../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec"
   EXApplication:
@@ -411,7 +426,9 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
 SPEC CHECKSUMS:
+  Base64: cecfb41a004124895a7bcee567a89bae5a89d49b
   boost-for-react-native: 39c7adb57c4e60d6c5479dd8623128eb5b3f0f2c
+  CodePush: b51b7ac64c07d4eacfc8cc5750a1dd28adbf2528
   DoubleConversion: cf9b38bf0b2d048436d9a82ad2abe1404f11e7de
   EXApplication: bdc8dc27713235565da1029a34385229f31b8e08
   EXConstants: 5d18484e38e8eacef7695a82214b6ac90133dedf
@@ -425,6 +442,7 @@ SPEC CHECKSUMS:
   FBLazyVector: c71c5917ec0ad2de41d5d06a5855f6d5eda06971
   FBReactNativeSpec: 00eacf8f760e4b211c235d3172d7cec1afcc47dd
   glog: 73c2498ac6884b13ede40eda8228cb1eee9d9d62
+  JWT: ef71dfb03e1f842081e64dc42eef0e164f35d251
   RCT-Folly: ec7a233ccc97cc556cf7237f0db1ff65b986f27c
   RCTRequired: d34bf57e17cb6e3b2681f4809b13843c021feb6c
   RCTTypeSafety: 8dab4933124ed39bb0c1d88d74d61b1eb950f28f
@@ -448,6 +466,7 @@ SPEC CHECKSUMS:
   React-RCTVibration: c7f845861e79eae13dc1e8217a3cf47a3945b504
   React-runtimeexecutor: 493d9abb8b23c3f84e19ae221eeba92cadcb70dc
   ReactCommon: 8fea6422328e2fc093e25c9fac67adbcf0f04fb4
+  SSZipArchive: 62d4947b08730e4cda640473b0066d209ff033c9
   Yoga: e6ecf3fa25af9d4c87e94ad7d5d292eedef49749
 
 PODFILE CHECKSUM: 3c876b5bbd0af5ed6ddf57b5b54c4d91e4333164

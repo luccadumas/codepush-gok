@@ -5,6 +5,7 @@
 #import <React/RCTRootView.h>
 #import <React/RCTLinkingManager.h>
 #import <React/RCTConvert.h>
+#import <CodePush/CodePush.h>
 
 #if defined(FB_SONARKIT_ENABLED) && __has_include(<FlipperKit/FlipperClient.h>)
 #import <FlipperKit/FlipperClient.h>
@@ -54,11 +55,11 @@ static void InitializeFlipper(UIApplication *application) {
 }
 
 - (NSURL *)sourceURLForBridge:(RCTBridge *)bridge {
- #ifdef DEBUG
-  return [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index" fallbackResource:nil];
- #else
-  return [[NSBundle mainBundle] URLForResource:@"main" withExtension:@"jsbundle"];
- #endif
+  #if DEBUG
+    return [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index" fallbackResource:nil];
+  #else
+    return [CodePush bundleURL];
+  #endif
 }
 
 // Linking API
